@@ -7,8 +7,14 @@ export function AppHeader() {
 	const [isMobile] = useMediaQuery("(max-width: 767px)");
 
 	return (
-		<Flex as="header" py={[2, 5]} pos="sticky" top={0} boxShadow="sm" zIndex={10}>
-			<Container maxW="container.xl">
+		<Flex as="header" my={[2, 5]} pos="sticky" top={0} boxShadow="sm" zIndex={10}>
+			<Container
+				maxW="container.xl"
+				borderBottom="0.5px solid"
+				borderColor="black.200"
+				backgroundColor="rgba(0, 0, 0, 0.7)"
+				backdropFilter="blur(7px)"
+			>
 				<Flex justify="space-between" align="center" flexWrap="wrap">
 					<Logo />
 					{isMobile ? <MobileMenu /> : <Menu />}
