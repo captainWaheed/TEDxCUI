@@ -24,8 +24,9 @@ export function MobileMenu() {
 				ref={btnRef}
 				variant="ghost"
 				onClick={onOpen}
-				sx={{ "&:hover": { bgColor: "transparent" } }}
+				sx={{ "&:hover": { bgColor: "transparent" }, position: "absolute", top: 2, right: 0 }}
 				title="Menu"
+				className=""
 			>
 				<BsGrid />
 			</Button>
