@@ -14,9 +14,10 @@ import {
 	useMediaQuery,
 	useColorModeValue
 } from "@chakra-ui/react";
-import { WelcomeAnimation } from "./IntroAnimation";
+// import { WelcomeAnimation } from "./IntroAnimation";
 import { useScrollTo } from "hooks";
 import { LayoutContext } from "context/layout";
+import Image from "next/image";
 
 export function WelcomeSection() {
 	const ref = useRef(null);
@@ -70,7 +71,7 @@ export function WelcomeSection() {
 				<GridItem area="content" py={[0, 0, 10]}>
 					<Heading
 						as="h1"
-						size={["xl", "2xl", "2xl", "2xl", "3xl"]}
+						size={["xl", "2xl", "2xl", "2xl", "2xl"]}
 						lineHeight="shorter !important"
 						mr={[null, null, null, "-25%"]}
 						tabIndex="0"
@@ -153,7 +154,8 @@ export function WelcomeSection() {
 
 				{isAnimationVisible && (
 					<GridItem area="animation">
-						<WelcomeAnimation />
+						{/* <WelcomeAnimation /> */}
+						<Image src={"/tedex.png"} width={400} height={400} alt="Logo" />
 					</GridItem>
 				)}
 			</Grid>
