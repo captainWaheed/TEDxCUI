@@ -4,35 +4,32 @@ import { Fragment, useRef } from "react";
 import { LazyMotion, domAnimation, useInView } from "framer-motion";
 import { Box, Heading, SimpleGrid, Flex, Text, Tooltip } from "@chakra-ui/react";
 import { HeadingDivider } from "components";
-import { AiFillHtml5 } from "react-icons/ai";
-import { DiCss3 } from "react-icons/di";
-import { IoLogoJavascript } from "react-icons/io";
-import { FaReact } from "react-icons/fa";
-import { TbBrandNextjs } from "react-icons/tb";
+// import { AiFillHtml5 } from "react-icons/ai";
+// import { DiCss3 } from "react-icons/di";
+// import { IoLogoJavascript } from "react-icons/io";
+// import { FaReact } from "react-icons/fa";
+// import { TbBrandNextjs } from "react-icons/tb";
+import Image from "next/image";
 
 const Technologies = [
 	{
-		category: "Front-end",
+		category: "Societies",
 		items: [
-			{ name: "HTML", icon: <AiFillHtml5 size={32} /> },
-			{ name: "CSS", icon: <DiCss3 size={32} /> },
-			{ name: "JS", icon: <IoLogoJavascript size={32} /> },
-			{ name: "React", icon: <FaReact size={32} /> },
-			{ name: "Next", icon: <TbBrandNextjs size={32} /> }
+			{ name: "TedxCUI", icon: <Image src="/tedex.png" width="100" height="100" alt="" /> }
+
+			// { name: "CSS", icon: <DiCss3 size={32} /> },
+			// { name: "JS", icon: <IoLogoJavascript size={32} /> },
+			// { name: "React", icon: <FaReact size={32} /> },
+			// { name: "Next", icon: <TbBrandNextjs size={32} /> }
+		]
+	},
+	{
+		category: "Sponsors",
+		items: [
+			{ name: "TedxCUI", icon: <Image src="/tedex.png" width="100" height="100" alt="" /> },
+			{ name: "TedxCUI", icon: <Image src="/tedex.png" width="100" height="100" alt="" /> }
 		]
 	}
-	// {
-	// 	category: "UI packages",
-	// 	items: [
-	// 		{ name: "Tailwind CSS", icon: <TbBrandTailwind size={32} /> },
-	// 		{ name: "MUI", icon: <MuiIcon width={32} /> },
-	// 		{ name: "AntD", icon: <AiOutlineAntDesign size={32} /> },
-	// 		{ name: "Bootstrap", icon: <BsBootstrap size={32} /> },
-	// 		{ name: "Chakra", icon: <ChakraIcon width={32} /> },
-	// 		{ name: "styled components", icon: <StyledIcon width={32} /> },
-	// 		{ name: "HeadlessUI", icon: <HeadlessUiIcon width={32} /> }
-	// 	]
-	// }
 	// {
 	// 	category: "UI tools",
 	// 	items: [

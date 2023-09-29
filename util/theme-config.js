@@ -25,7 +25,7 @@ const stylesConfig = {
 
 const colors = {
 	brand: {
-		100: "#fbf8f3",
+		100: "#000000",
 		300: "#7928CA",
 		400: "#FF0080",
 		500: "#000000"

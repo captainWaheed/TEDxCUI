@@ -11,7 +11,7 @@ export function AppHeader() {
 			<Container
 				maxW="container.xl"
 				borderBottom="0.5px solid"
-				borderColor="black.200"
+				borderColor="black.800"
 				backgroundColor="rgba(0, 0, 0, 0.7)"
 				backdropFilter="blur(7px)"
 			>

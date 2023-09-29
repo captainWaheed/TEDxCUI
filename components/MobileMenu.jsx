@@ -24,23 +24,29 @@ export function MobileMenu() {
 				ref={btnRef}
 				variant="ghost"
 				onClick={onOpen}
-				sx={{ "&:hover": { bgColor: "transparent" }, position: "absolute", top: 2, right: 0 }}
+				sx={{ "&:hover": { bgColor: "black" }, position: "absolute", top: 2, right: 0 }}
 				title="Menu"
 				className=""
 			>
 				<BsGrid />
 			</Button>
 
-			<Drawer isOpen={isOpen} placement="right" onClose={onClose} finalFocusRef={btnRef}>
+			<Drawer
+				isOpen={isOpen}
+				placement="right"
+				onClose={onClose}
+				colorScheme="red"
+				finalFocusRef={btnRef}
+			>
 				<DrawerOverlay />
 				<DrawerContent>
-					<DrawerCloseButton sx={{ "&:hover": { bgColor: "transparent" } }} />
-					<DrawerHeader>
-						<ConnectMedia />
+					<DrawerCloseButton sx={{ "&:hover": { bgColor: "red" } }} />
+					<DrawerHeader sx={{ bgColor: "black" }}>
+						<ConnectMedia sx={{ bgColor: "black" }} />
 					</DrawerHeader>
 
-					<DrawerBody pt="40px" borderTop="1px solid currentColor">
-						<Menu onClick={onClose} />
+					<DrawerBody pt="40px" borderTop="1px solid red">
+						<Menu onClick={onClose} sx={{ bgColor: "black" }} />
 					</DrawerBody>
 				</DrawerContent>
 			</Drawer>

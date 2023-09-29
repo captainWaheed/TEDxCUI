@@ -1,6 +1,4 @@
-"use client";
-
-import { useEffect, useState, useRef, useContext } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import Link from "next/link";
 import { LazyMotion, domAnimation, useInView } from "framer-motion";
 import {
@@ -14,7 +12,6 @@ import {
 	useMediaQuery,
 	useColorModeValue
 } from "@chakra-ui/react";
-// import { WelcomeAnimation } from "./IntroAnimation";
 import { useScrollTo } from "hooks";
 import { LayoutContext } from "context/layout";
 import Image from "next/image";
@@ -42,15 +39,11 @@ export function WelcomeSection() {
 
 	useEffect(() => {
 		let interval = setInterval(() => {
-			setCount(count + 1);
-
-			if (count === 3) {
-				setCount(0);
-			}
+			setCount((count) => (count === 2 ? 0 : count + 1)); // Update count cyclically
 		}, 2000);
 
 		return () => clearInterval(interval);
-	}, [count]);
+	}, []);
 
 	useEffect(() => {
 		setIntroHeight(introRef.current?.offsetHeight);
@@ -68,6 +61,14 @@ export function WelcomeSection() {
 				alignItems="center"
 				ref={introRef}
 			>
+				<GridItem>
+					<Image
+						src={"/tedex.png"}
+						width={isAnimationVisible ? 500 : 450}
+						height={isAnimationVisible ? 500 : 450}
+						alt="Logo"
+					/>
+				</GridItem>
 				<GridItem area="content" py={[0, 0, 10]}>
 					<Heading
 						as="h1"
@@ -102,7 +103,7 @@ export function WelcomeSection() {
 							<Text
 								as="span"
 								pos="absolute"
-								top={count === 0 ? "0" : count === 1 ? "-100%" : count === 2 ? "-200%" : "0"}
+								top={count === 0 ? "0" : count === 1 ? "-100%" : "-200%"}
 								left={10}
 								display="flex"
 								flexDirection="column"
@@ -145,26 +146,23 @@ export function WelcomeSection() {
 						<Link
 							href="#projects"
 							onClick={onClick}
-							style={{ display: "block", padding: "0 16px", lineHeight: "40px" }}
+							style={{
+								display: "block",
+								padding: "0 16px",
+								lineHeight: "40px"
+							}}
 						>
 							Attend
 						</Link>
 					</Button>
 				</GridItem>
-
-				{isAnimationVisible && (
-					<GridItem area="animation">
-						{/* <WelcomeAnimation /> */}
-						<Image src={"/tedex.png"} width={400} height={400} alt="Logo" />
-					</GridItem>
-				)}
 			</Grid>
 		</LazyMotion>
 	);
 }
 
 function TextElement({ element }) {
-	const firstWord = <b>{element.split(" ").at(0)}</b>;
+	const firstWord = <b>{element.split(" ")[0]}</b>;
 	const restWords = element.split(" ").slice(1).join(" ");
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true });
