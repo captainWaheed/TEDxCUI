@@ -20,6 +20,7 @@ export function WelcomeSection() {
 	const ref = useRef(null);
 	const { introRef, setIntroHeight } = useContext(LayoutContext);
 	const isInView = useInView(ref, { once: true });
+	const [isMobile] = useMediaQuery("(max-width: 767px)");
 
 	const { scrollToEl } = useScrollTo();
 	const [isAnimationVisible] = useMediaQuery("(min-width: 768px)");
@@ -61,7 +62,10 @@ export function WelcomeSection() {
 				alignItems="center"
 				ref={introRef}
 			>
-				<GridItem>
+				<GridItem
+					justifySelf={isMobile ? "center" : "start"}
+					placeSelf={isMobile ? "center" : "start"}
+				>
 					<Image
 						src={"/tedex.png"}
 						width={isAnimationVisible ? 500 : 450}
@@ -104,7 +108,7 @@ export function WelcomeSection() {
 								as="span"
 								pos="absolute"
 								top={count === 0 ? "0" : count === 1 ? "-100%" : "-200%"}
-								left={10}
+								left={isMobile ? 8 : 10} // Set left to 8 on mobile screens, 10 otherwise
 								display="flex"
 								flexDirection="column"
 								transition="top .5s ease-in-out"
