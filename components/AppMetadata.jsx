@@ -1,6 +1,6 @@
 const author = "Abdul Waheed";
 const description = "A front-end developer from Pakistan";
-const url = "";
+const url = "tedxcui.com";
 export const AppMetadata = {
   title: {
     default: "TEDx CUI"
@@ -9,29 +9,7 @@ export const AppMetadata = {
   icons: {
     icon: "/favicon.ico"
   },
-  keywords: ["TEDxCUI", "COMSATS", "TED Event", "Islamabad university"],
+  keywords: ["TEDxCUI", "COMSATS", "TEDx Event", "Islamabad university", "CUI", "tedxcui.com"],
   creator: author,
   authors: [{ name: author, url: url }]
-  // openGraph: {
-  // 	title: `${author} | Portfolio`,
-  // 	description: description,
-  // 	url: url,
-  // 	siteName: `${author} | Portfolio`,
-  // 	images: [
-  // 		{
-  // 			url: "https://vasile-novatchii.netlify.app/screenshot.webp",
-  // 			width: 800,
-  // 			height: 600,
-  // 			alt: "My personal portfolio website"
-  // 		},
-  // 		{
-  // 			url: "https://vasile-novatchii.netlify.app/screenshot.webp",
-  // 			width: 1800,
-  // 			height: 1600,
-  // 			alt: "My personal portfolio website"
-  // 		}
-  // 	],
-  // 	locale: "en-US",
-  // 	type: "website"
-  // }
 };
