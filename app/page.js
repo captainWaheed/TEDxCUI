@@ -1,16 +1,15 @@
 "use client";
 
-import { WelcomeSection, AboutSection, SocitiesSection } from "app/sections";
+import { WelcomeSection, AboutSection } from "app/sections";
 import { SpeakerSection } from "./sections/speakers";
 
 export default function Page() {
-	return (
-		<>
-			<WelcomeSection />
-			<AboutSection />
-			<SpeakerSection />
-			{/* <ProjectsSection /> */}
-			<SocitiesSection />
-		</>
-	);
+  return (
+    <>
+      <WelcomeSection />
+      <AboutSection />
+      <SpeakerSection />
+      {/* <SocitiesSection /> */}
+    </>
+  );
 }

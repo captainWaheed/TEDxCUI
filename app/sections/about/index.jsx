@@ -4,47 +4,44 @@ import { useRef } from "react";
 import { LazyMotion, domAnimation, useInView } from "framer-motion";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { HeadingDivider } from "components";
+import Image from "next/image";
 // import { TimeLine } from "./TimeLine";
 
 export function AboutSection() {
-	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true });
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
-	return (
-		<LazyMotion features={domAnimation}>
-			<Box as="section" id="about" className="section">
-				<HeadingDivider title="About Us" />
-				<Flex direction="column" gap={3} pt={10} pb={16} maxW="5xl">
-					<Text
-						fontSize="xl"
-						tabIndex="0"
-						ref={ref}
-						sx={{
-							transform: isInView ? "none" : "translateX(-200px)",
-							opacity: isInView ? 1 : 0,
-							transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-						}}
-					>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore ipsa voluptatem velit
-						ullam, perferendis laboriosam ab, omnis nemo veniam facilis doloremque necessitatibus
-						nesciunt?
-					</Text>
-					<Text
-						fontSize="xl"
-						tabIndex="0"
-						ref={ref}
-						sx={{
-							transform: isInView ? "none" : "translateX(-200px)",
-							opacity: isInView ? 1 : 0,
-							transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1s"
-						}}
-					>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. At, asperiores.
-					</Text>
-				</Flex>
+  return (
+    <>
+      <LazyMotion features={domAnimation}>
+        <Box as="section" id="about" className="section">
+          <HeadingDivider title="About Us" />
+          <Flex direction="row" gap={6} pt={10} pb={16} maxW="6xl" ref={ref}>
+            <Text
+              fontSize="2xl"
+              weight="extra-bold"
+              tabIndex="0"
+              sx={{
+                textAlign: "justify",
+                transform: isInView ? "none" : "translateX(-100px)",
+                opacity: isInView ? 1 : 0,
+                transition: "all 0.2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s"
+              }}
+            >
+              At TEDxCUI we strive towards reviving the thought process of the community by bringing
+              them innovative ideas, not only as an inspiration for them to create, but to energize
+              and motivate them to go further where their thoughts take them to break the barriers
+              of conventional thinking and explore and revolutionize the world with their ideas
+              belonging to any discipline, ranging from technology to social sciences to art and
+              entertainment. With this, we aim to revitalize young minds and ignite their passion
+              for creativity.
+            </Text>
+            <Image src="/About.jpeg" width="300" height="300" alt="" />
+          </Flex>
 
-				{/* <TimeLine /> */}
-			</Box>
-		</LazyMotion>
-	);
+          {/* <TimeLine /> */}
+        </Box>
+      </LazyMotion>
+    </>
+  );
 }
