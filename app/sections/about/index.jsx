@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { LazyMotion, domAnimation, useInView } from "framer-motion";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import { HeadingDivider } from "components";
 import Image from "next/image";
 // import { TimeLine } from "./TimeLine";
@@ -10,15 +10,23 @@ import Image from "next/image";
 export function AboutSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const [isMobile] = useMediaQuery("(max-width: 767px)");
 
   return (
     <>
       <LazyMotion features={domAnimation}>
         <Box as="section" id="about" className="section">
           <HeadingDivider title="About Us" />
-          <Flex direction="row" gap={6} pt={10} pb={16} maxW="6xl" ref={ref}>
+          <Flex
+            direction={isMobile ? "column" : "row"}
+            gap={6}
+            pt={10}
+            pb={16}
+            maxW={isMobile ? "4xl" : "6x1"}
+            ref={ref}
+          >
             <Text
-              fontSize="2xl"
+              fontSize={isMobile ? "sm" : "2xl"}
               weight="extra-bold"
               tabIndex="0"
               sx={{
