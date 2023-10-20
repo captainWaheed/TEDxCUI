@@ -22,8 +22,8 @@ const sponsors = [
     name: "DevHawks",
     logoSrc: "/DevHawks.png",
     introduction:
-      "DevHawks is a tech startup offering services in Web Development, Machine Learning, and Mobile Development. They are our Platinum Sponsor.",
-    sponsorType: "Platinum",
+      "DevHawks is a tech startup offering services in Web Development, Machine Learning, and Mobile Development. They are our Silver Sponsor.",
+    sponsorType: "Silver",
     website: "https://devhawks.org",
     twitter: "https://twitter.com/HawksDevHQ",
     linkedin: "https://www.linkedin.com/company/devhawks/",
@@ -33,7 +33,7 @@ const sponsors = [
     name: "iSEO Ranker",
     logoSrc: "/iSEORanker.png",
     introduction:
-      "iSEO Ranker is also a Platinum Sponsor with over a decade of experience in the ever-evolving digital world. They are more than just a digital agency.",
+      "iSEO Ranker is our Platinum Sponsor with over a decade of experience in the ever-evolving digital world. They are more than just a digital agency.",
     sponsorType: "Platinum",
     website: "https://www.facebook.com/officialiseoranker",
     twitter: "https://twitter.com/iseoranker?s=11",

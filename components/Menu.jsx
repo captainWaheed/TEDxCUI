@@ -18,7 +18,8 @@ const MenuItems = [
 
 const linkCustomStyles = {
   "&:hover": {
-    textUnderline: "none"
+    textUnderline: "none",
+    color: "red"
   },
   "&:after": {
     content: '""',
