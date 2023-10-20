@@ -22,6 +22,16 @@ const sponsors = [
     twitter: "https://twitter.com/HawksDevHQ",
     linkedin: "https://www.linkedin.com/company/devhawks/",
     instagram: "https://www.instagram.com/dev_hawks/?igshid=MmU2YjMzNjRlOQ%3D%3D"
+  },
+  {
+    name: "Alif The Band",
+    logoSrc: "/alif.png", // Replace with the actual logo URL
+    introduction:
+      "TEDxCUI is honored to have Alif The Band as our Music Partner🎸. Get ready for a musical journey that will resonate deep within your soul. These Sufi-Rock enthusiasts are all set to rock your world with their fusion of melodies that blend tradition with modernity. A special thanks to @alif_the_band_ for being with us for our Tedx event. With a unique sound that's both electrifying and emotionally stirring, Alif The Band promises to set the stage on fire and leave you enchanted. Their dedication to their craft is an inspiration, and we can't wait to share their spellbinding melodies with our audience. Prepare to be moved, A huge round of applause to Alif The Band. 🌍🔥",
+    sponsorType: "Music Partner", // You can set the type as needed
+    website: "#",
+    instagram: "https://www.instagram.com/alif_the_band_/",
+    facebook: "#"
   }
 ];
 const isBuilding = true;

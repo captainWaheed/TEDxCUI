@@ -27,7 +27,7 @@ export function AboutSection() {
           >
             <Text
               fontSize={isMobile ? "sm" : "xl"}
-              p={5}
+              px={5}
               weight="extra-bold"
               tabIndex="0"
               sx={{

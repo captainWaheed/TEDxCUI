@@ -57,6 +57,7 @@ export function WelcomeSection() {
         id="home"
         className="section"
         gap={5}
+        pl={"1.5vw"}
         templateAreas={[`"content"`, `"content"`, `"content animation"`]}
         gridTemplateColumns={["1fr", "1fr", "1fr 0.5fr", "1fr 0.7fr"]}
         alignItems="center"
