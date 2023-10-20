@@ -45,7 +45,7 @@ export function AboutSection() {
               entertainment. With this, we aim to revitalize young minds and ignite their passion
               for creativity.
             </Text>
-            <Image src="/About.jpeg" width="300" height="300" alt="" />
+            <Image src="/About.jpeg" width="300" height="300" alt="Image of TEDxCUI Tag" />
           </Flex>
 
           {/* <TimeLine /> */}

@@ -82,7 +82,6 @@ const TeamsSection = () => {
       <head>
         <title>TEDxCUI | Teams</title>
       </head>
-
       <LazyMotion features={domAnimation}>
         <Box as="section" id="teams" className="section">
           <Flex
@@ -91,7 +90,7 @@ const TeamsSection = () => {
             flexWrap="wrap"
             gap={20}
             pt={10}
-            pl={"9vw"}
+            pl={"6vw"}
             pb={16}
             maxW="4x2"
           >
@@ -110,6 +109,7 @@ const TeamsSection = () => {
               >
                 <Image
                   src={team.imageSrc}
+                  rounded={"md"}
                   alt="Team Member"
                   width={500}
                   height={500}

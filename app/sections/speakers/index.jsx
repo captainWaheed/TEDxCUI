@@ -78,7 +78,7 @@ export function SpeakerSection() {
           flexWrap="wrap"
           gap={20}
           ref={ref}
-          pl={"7vw"}
+          pl={"4vw"}
           pt={10}
           pb={16}
           maxW="4x2"
