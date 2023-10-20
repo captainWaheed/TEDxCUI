@@ -60,7 +60,7 @@ const Headings = {
         bgGradient:
           props.colorMode === "dark"
             ? "linear(to-l, gray.300, gray.50)"
-            : "linear(to-l, gray.600, gray.900)",
+            : "linear(to-l, gray.300, gray.50)",
         bgClip: "text"
       })
     },
