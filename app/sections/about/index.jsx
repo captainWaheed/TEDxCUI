@@ -21,12 +21,13 @@ export function AboutSection() {
             direction={isMobile ? "column" : "row"}
             gap={6}
             pt={10}
-            pb={16}
+            // pb={16}
             maxW={isMobile ? "4xl" : "6x1"}
             ref={ref}
           >
             <Text
-              fontSize={isMobile ? "sm" : "2xl"}
+              fontSize={isMobile ? "sm" : "xl"}
+              p={5}
               weight="extra-bold"
               tabIndex="0"
               sx={{

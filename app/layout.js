@@ -10,6 +10,9 @@ import Loading from "./loading";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>TEDx CUI</title>
+      </head>
       <body>
         <ChakraProvider theme={theme}>
           <AppHeader />

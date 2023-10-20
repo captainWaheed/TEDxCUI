@@ -1,5 +1,5 @@
 "use client";
-// import { useRef } from "react";
+
 import { LazyMotion, domAnimation } from "framer-motion";
 import { Box, Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import Image from "next/image";
@@ -78,57 +78,60 @@ const TeamsSection = () => {
   const [isMobile] = useMediaQuery("(max-width: 767px)");
 
   return (
-    <LazyMotion features={domAnimation}>
-      <Box as="section" id="teams" className="section">
-        <Flex
-          direction={isMobile ? "column" : "row"}
-          alignItems={isMobile ? "center" : "flex-start"}
-          flexWrap="wrap"
-          gap={20}
-          pt={10}
-          pl={"9vw"}
-          pb={16}
-          maxW="4x2"
-        >
-          {teams.map((team) => (
-            <Flex
-              key={team.id}
-              fontSize="xl"
-              tabIndex="0"
-              sx={{
-                flex: "0 0 25%",
-                // transform: isInView ? "none" : "translateX(-0px)",
-                // opacity: isInView ? 1 : 1,
-                transition: "all 0.1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-                textAlign: "center"
-              }}
-            >
-              <Image
-                src={team.imageSrc}
-                alt="Team Member"
-                width={500}
-                height={500}
-                className="tw-rounded-md"
-              />
-              <Text
-                fontSize={["2xl"]}
-                color={"white"}
-                mt={3}
+    <>
+      <head>
+        <title>TEDxCUI | Teams</title>
+      </head>
+
+      <LazyMotion features={domAnimation}>
+        <Box as="section" id="teams" className="section">
+          <Flex
+            direction={isMobile ? "column" : "row"}
+            alignItems={isMobile ? "center" : "flex-start"}
+            flexWrap="wrap"
+            gap={20}
+            pt={10}
+            pl={"9vw"}
+            pb={16}
+            maxW="4x2"
+          >
+            {teams.map((team) => (
+              <Flex
+                key={team.id}
+                fontSize="xl"
                 tabIndex="0"
-                // ref={ref}
                 sx={{
-                  // transform: isInView ? "none" : "translateX(-200px)",
-                  // opacity: isInView ? 1 : 0,
-                  transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+                  flex: "0 0 25%",
+                  // transform: isInView ? "none" : "translateX(-0px)",
+                  // opacity: isInView ? 1 : 1,
+                  transition: "all 0.1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                  textAlign: "center"
                 }}
               >
-                {team.name}
-              </Text>
-            </Flex>
-          ))}
-        </Flex>
-      </Box>
-    </LazyMotion>
+                <Image
+                  src={team.imageSrc}
+                  alt="Team Member"
+                  width={500}
+                  height={500}
+                  className="tw-rounded-md"
+                />
+                <Text
+                  fontSize={["2xl"]}
+                  color={"white"}
+                  mt={3}
+                  tabIndex="0"
+                  sx={{
+                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+                  }}
+                >
+                  {team.name}
+                </Text>
+              </Flex>
+            ))}
+          </Flex>
+        </Box>
+      </LazyMotion>
+    </>
   );
 };
 
