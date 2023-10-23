@@ -5,7 +5,6 @@ import { LazyMotion, domAnimation, useInView } from "framer-motion";
 import { Box, Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import { HeadingDivider } from "components";
 import Image from "next/image";
-// import { TimeLine } from "./TimeLine";
 
 export function AboutSection() {
   const ref = useRef(null);
@@ -54,7 +53,6 @@ export function AboutSection() {
             alt="event timeline"
             className="tw-rounded-md"
           />
-          {/* <TimeLine /> */}
         </Box>
       </LazyMotion>
     </>
