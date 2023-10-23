@@ -47,7 +47,13 @@ export function AboutSection() {
             </Text>
             <Image src="/About.jpeg" width="300" height="300" alt="Image of TEDxCUI Tag" />
           </Flex>
-
+          <Image
+            src="/timeline.png"
+            width={900}
+            height={100}
+            alt="event timeline"
+            className="tw-rounded-md"
+          />
           {/* <TimeLine /> */}
         </Box>
       </LazyMotion>

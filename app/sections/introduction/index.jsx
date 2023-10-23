@@ -24,7 +24,7 @@ export function WelcomeSection() {
 
   // const { scrollToEl } = useScrollTo();
   const [isAnimationVisible] = useMediaQuery("(min-width: 768px)");
-  const subTitleColor = useColorModeValue("blackAlpha.900", "whiteAlpha.600");
+  const subTitleColor = useColorModeValue("whiteAlpha.900", "whiteAlpha.600");
   const highlightColor = useColorModeValue("red.500", "red.500");
 
   let [count, setCount] = useState(0);
