@@ -11,9 +11,9 @@ import { initial, animate, exit, transition } from "util/motions";
 const MenuItems = [
   { id: "0", name: "Home", url: "/" },
   { id: "1", name: "About", url: "/#about" },
-  { id: "2", name: "Sponsors", url: "/Sponsors" },
-  { id: "3", name: "Team", url: "/Teams" },
-  { id: "4", name: "Speakers", url: "/#speakers" }
+  { id: "2", name: "Speakers", url: "/#speakers" },
+  { id: "3", name: "Sponsors", url: "/Sponsors" },
+  { id: "4", name: "Team", url: "/Teams" }
 ];
 
 const linkCustomStyles = {

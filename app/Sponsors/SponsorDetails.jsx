@@ -55,7 +55,7 @@ export default function SponsorDetails(props) {
             </Heading>
 
             <Text
-              color={useColorModeValue("gray.900", "gray.400")}
+              color={useColorModeValue("gray.200", "gray.200")}
               fontWeight={300}
               fontSize={"sm"}
             >
@@ -66,7 +66,7 @@ export default function SponsorDetails(props) {
           <Stack
             spacing={{ base: 4, sm: 6 }}
             direction={"column"}
-            divider={<StackDivider borderColor={useColorModeValue("gray.200", "gray.600")} />}
+            divider={<StackDivider borderColor={useColorModeValue("gray.200", "gray.200")} />}
           >
             {hasSocialMedia && (
               <Box>
@@ -79,7 +79,7 @@ export default function SponsorDetails(props) {
                 >
                   Social Links
                 </Text>
-                <List spacing={2}>
+                <List spacing={2} color={useColorModeValue("gray.200", "gray.200")}>
                   {website && (
                     <ListItem>
                       <Link href={website} target="_blank" rel="noopener noreferrer">

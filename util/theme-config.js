@@ -4,7 +4,7 @@ const navigationHeight = 80;
 const footerHeight = 100;
 
 const configColorMode = {
-  initialColorMode: "system",
+  initialColorMode: "dark",
   useSystemColorMode: true
 };
 
@@ -74,6 +74,9 @@ const theme = extendTheme({
   config: configColorMode,
   styles: stylesConfig,
   colors,
+  config: {
+    initialColorMode: "dark" // Set the initial color mode to "dark"
+  },
   components: { ...Buttons, ...Headings }
 });
 
