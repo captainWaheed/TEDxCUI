@@ -6,3 +6,17 @@
 * {
   font-family: "Rubik", sans-serif;
 }
+::-webkit-scrollbar {
+  width: 9.6px !important; /* 0.6rem * 16px */
+  background-color: black !important;
+  border-radius: 8px !important; /* 0.5rem * 16px */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darkgray !important;
+  border-radius: 8px !important; /* 0.5rem * 16px */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: grey !important;
+}

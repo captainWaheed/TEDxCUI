@@ -25,6 +25,7 @@ export function MobileMenu() {
         onClick={onOpen}
         sx={{ "&:hover": { bgColor: "black" }, position: "absolute", top: 2, right: 0 }}
         title="Menu"
+        color={"white"}
         className=""
       >
         <BsGrid />
@@ -38,7 +39,7 @@ export function MobileMenu() {
         finalFocusRef={btnRef}
       >
         <DrawerOverlay>{/* Set the background color of the overlay to black */}</DrawerOverlay>
-        <DrawerContent sx={{ bgColor: "black" }}>
+        <DrawerContent sx={{ bgColor: "black" }} color={"white"}>
           <DrawerCloseButton sx={{ "&:hover": { bgColor: "red" } }} />
           <DrawerHeader sx={{ bgColor: "black" }}>
             <ConnectMedia sx={{ bgColor: "black" }} />

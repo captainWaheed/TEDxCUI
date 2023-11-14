@@ -125,7 +125,7 @@ export function WelcomeSection() {
 
           <Text
             fontSize={["md", "lg"]}
-            color={subTitleColor}
+            color={"whiteAlpha.700"}
             mt={3}
             mb={10}
             tabIndex="0"

@@ -29,7 +29,7 @@ export function AboutSection() {
               px={5}
               weight="extra-bold"
               tabIndex="0"
-              color={"gray.200"}
+              color={"gray.300"}
               sx={{
                 textAlign: "justify",
                 transform: isInView ? "none" : "translateX(-100px)",
